@@ -20,14 +20,14 @@ new Vue({
     },
     methods: {
         renderItems: function (response) {
-            var data = JSON.parse(response.bodyText),
-                googleLink = this.googleLink;
-            this.items = data._embedded['city:search-results'].map(function(item) {
-                return {
-                    name: item.matching_full_name,
-                    link: googleLink + item.matching_full_name
-                };
-            });
+            var googleLink = this.googleLink;
+            this.items = response.body._embedded['city:search-results']
+                .map(function(item) {
+                    return {
+                        name: item.matching_full_name,
+                        link: googleLink + item.matching_full_name
+                    };
+                });
             if (this.items.length) {
                 this.isActive = true;
             }
