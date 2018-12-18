@@ -1,16 +1,16 @@
 # vuejs-workshop
 Task for vuejs-workshop
 
-See a [live demo](http://workshop.rudchyk.pp.ua/).
+See a [live demo](https://vuejs-workshop.componentix.net/).
 
 ## Preparation:
 ```
-npm i
+npm install
 ```
 
 ## Start:
 ```
-npm run start
+npm start
 ```
 
 ## Helpful data:
